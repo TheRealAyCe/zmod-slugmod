@@ -1,0 +1,43 @@
+t = Def.ActorFrame {}
+ 
+t[#t+1] = Def.Sprite {    
+  Texture="NOATH_Inv 5x6.png",
+
+  Frame0000=1, Delay0000=0.066666666,
+  Frame0001=2, Delay0001=0.066666666,
+  Frame0002=3, Delay0002=0.066666666,
+  Frame0003=4, Delay0003=0.066666666,
+  Frame0004=5, Delay0004=0.066666666,
+  Frame0005=6, Delay0005=0.066666666,
+  Frame0006=7, Delay0006=0.066666666,
+  Frame0007=8, Delay0007=0.066666666,
+  Frame0008=9, Delay0008=0.066666666,
+  Frame0009=10,Delay0009=0.066666666,
+  Frame0010=11,Delay0010=0.066666666,
+  Frame0011=12,Delay0011=0.066666666,
+  Frame0012=13,Delay0012=0.066666666,
+  Frame0013=14,Delay0013=0.066666666,
+  Frame0014=15,Delay0014=0.066666666,
+  Frame0015=16,Delay0015=0.066666666,
+  Frame0016=17,Delay0016=0.066666666,
+  Frame0017=18,Delay0017=0.066666666,
+  Frame0018=19,Delay0018=0.066666666,
+  Frame0019=20,Delay0019=0.066666666,
+  Frame0020=21,Delay0020=0.066666666,
+  Frame0021=22,Delay0021=0.066666666,
+  Frame0022=23,Delay0022=0.066666666,
+  Frame0023=24,Delay0023=0.066666666,
+  Frame0024=25,Delay0024=0.066666666,
+  Frame0025=26,Delay0025=0.066666666,
+  Frame0026=27,Delay0026=0.066666666,
+  Frame0027=28,Delay0027=0.066666666,
+  Frame0028=29,Delay0028=0.066666666,
+  Frame0029=0, Delay0029=0.066666666,
+
+  OnCommand=function(self)
+    self:effectclock("bgm")
+    self:zoom(0.5)
+  end  
+}
+ 
+return t

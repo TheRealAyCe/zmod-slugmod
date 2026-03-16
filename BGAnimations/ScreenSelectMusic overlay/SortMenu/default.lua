@@ -341,6 +341,7 @@ local wheel_options = {
 	{ {"SortBy", "Group"} },
 	{ {"SortBy", "Title"} },
 	{ {"SortBy", "Recent"} },
+	{ {"NextPlease", "SwitchProfile"}, ThemePrefs.Get("AllowScreenSelectProfile") },
 	-- Allow players to switch out to a different SL GameMode if no stages have been played yet,
 	-- but don't add the current SL GameMode as a choice.
 	{ {"ChangeMode", "ITG"}, SL.Global.Stages.PlayedThisGame == 0 and SL.Global.GameMode ~= "ITG" },
