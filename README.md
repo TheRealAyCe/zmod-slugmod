@@ -4,6 +4,9 @@ Slugmod aims to improve some rough edges to make the theme a bit nicer to use, e
 - Dancing Slugcat GIFs by Not Luther (No One Is Around To Help)
 - Switch players directly from the song selection screen via Restart key
 - Display total/remaining song time instead of BPM in versus mode
+- Useful tools on the first level of the options menu
+  - Switch Profile
+  - Song Search
 
 
 # Zmod fork of Simply Love

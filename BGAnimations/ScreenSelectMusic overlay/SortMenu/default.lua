@@ -294,6 +294,7 @@ local wheel_options = {
 	-- The second element's table contains that options will show under this category.
 	-- It follows the same structure as the top level table.
 
+	{ {"WhereforeArtThou", "SongSearch"}, not GAMESTATE:IsCourseMode() and ThemePrefs.Get("KeyboardFeatures") },
 	{ 
 		{"", "CategorySorts"}, 
 		{
