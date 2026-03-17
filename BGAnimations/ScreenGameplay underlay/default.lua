@@ -64,6 +64,13 @@ for player in ivalues(Players) do
 end
 
 -- add to the ActorFrame last; overlapped by StepStatistics otherwise
-t[#t+1] = LoadActor("./Shared/BPMDisplay.lua")
+
+if GAMESTATE:GetCurrentStyle():GetName() == "versus" then
+	-- we don't care about BPM, give us time instead!
+	t[#t+1] = LoadActor("./Shared/TimeDisplay.lua")
+else
+	t[#t+1] = LoadActor("./Shared/BPMDisplay.lua")
+end
+
 
 return t
