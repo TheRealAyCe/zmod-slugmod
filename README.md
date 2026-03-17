@@ -1,3 +1,11 @@
+# Slugmod
+Slugmod aims to improve some rough edges to make the theme a bit nicer to use, especially for versus mode with different people (=events).
+
+- Dancing Slugcat GIFs by Not Luther (No One Is Around To Help)
+- Switch players directly from the song selection screen via Restart key
+- Display total/remaining song time instead of BPM in versus mode
+
+
 # Zmod fork of Simply Love
 
 A fork of Simply Love with some extra features that (attempt to) enhance quality of life while playing.
