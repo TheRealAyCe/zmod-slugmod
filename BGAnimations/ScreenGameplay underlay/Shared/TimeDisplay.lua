@@ -17,22 +17,15 @@ for humanPlayer in ivalues(humanPlayers) do
 	end
 end
 
-local MasterPlayerState = GAMESTATE:GetPlayerState(player)
-
-local bpmDisplay
-local SongPosition = MasterPlayerState:GetSongPosition()
+local SongPosition = GAMESTATE:GetPlayerState(player):GetSongPosition()
 
 local rate = SL.Global.ActiveModifiers.MusicRate
-
-local IsUltraWide = (GetScreenAspectRatio() > 21/9)
 
 local style = GAMESTATE:GetCurrentStyle():GetName()
 
 -- -----------------------------------------------------------------------
 -- reference to the BitmapText actor that will display remaining time
 local remBMT
--- how wide (in visual pixels) the total time is, used to offset the label
-local total_width
 
 -- -----------------------------------------------------------------------
 -- reference to the function we'll use to format long-form seconds (like 208.64382946)
@@ -116,14 +109,8 @@ af.InitCommand=function(self)
 	self:SetUpdateFunction(Update)
 
 
-	--SCREENMAN:SystemMessage("TotalWidth: ".. tostring(total_width))
-
-	--self:xy(_screen.cx-(total_width), 52)
 	self:xy(_screen.cx, 52)
 
-
-	--self:setsize(total_width, 0)
-	--self:halign(0.5):valign(1) --:zoom(1.33)
 end
 
 af.CurrentSongChangedMessageCommand=function(self,params)
@@ -153,7 +140,6 @@ af[#af+1] = LoadFont(ThemePrefs.Get("ThemeFont") .. " Normal")..{
 		self:halign(1):vertalign(bottom)
 
 		self:settext( fmt(totalseconds) )
-		total_width = self:GetWidth()
 		
 		
 		--self:xy(_screen.cx, 52):valign(1):zoom(1.33)
