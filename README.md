@@ -4,9 +4,17 @@ Slugmod aims to improve some rough edges to make the theme a bit nicer to use, e
 - Dancing Slugcat GIFs by Not Luther (No One Is Around To Help)
 - Switch players directly from the song selection screen via Restart key
 - Display total/remaining song time instead of BPM in versus mode
-- Useful tools on the first level of the options menu
+- <s>Useful tools on the first level of the options menu</s> (These have since been moved in Simply Love/zmod)
   - Switch Profile
   - Song Search
+- Can flag/unflag songs with LeftUp/RightUp
+  - A small icon is shown next to the song name
+  - Useful to mark songs with broken charts to be fixed later
+  - The list of marked songs is saved to Save/LocalProfiles (global)
+
+Todo:
+- ESC menu handling (use as "back", close ESC menu with ESC)
+- Jump to random song with selected difficulty
 
 
 # Zmod fork of Simply Love

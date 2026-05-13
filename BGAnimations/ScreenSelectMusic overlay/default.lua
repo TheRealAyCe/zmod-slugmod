@@ -36,22 +36,29 @@ local af = Def.ActorFrame{
 			addOrRemoveFavorite(params.PlayerNumber)
 		elseif params.Name == "EscapeFromEventMode" then
 			SCREENMAN:GetTopScreen():Cancel()
-		end
-		if params.Name == "SwitchProfile" then
-                -- SCREENMAN:SystemMessage("Switching profiles!")
-				
-					SL.Global.FastProfileSwitchInProgress = true
-					-- If a memory card is inserted we can't be on that profile's songs when switching profiles
-					-- as the profile is temporarily unloaded when finishing the screen.
-					if MEMCARDMAN:GetCardState(PLAYER_1) ~= 'MemoryCardState_none' or MEMCARDMAN:GetCardState(PLAYER_2) ~= 'MemoryCardState_none' then
-						SCREENMAN:GetTopScreen():GetMusicWheel():SetOpenSection("");
-					end
-					-- Make sure we save any currently active profiles before potentially switching
-					-- to different ones.
-					GAMESTATE:SaveProfiles()
-					PROFILEMAN:SaveMachineProfile()
+		elseif params.Name == "SwitchProfile" then
+			SL.Global.FastProfileSwitchInProgress = true
+			-- If a memory card is inserted we can't be on that profile's songs when switching profiles
+			-- as the profile is temporarily unloaded when finishing the screen.
+			if MEMCARDMAN:GetCardState(PLAYER_1) ~= 'MemoryCardState_none' or MEMCARDMAN:GetCardState(PLAYER_2) ~= 'MemoryCardState_none' then
+				SCREENMAN:GetTopScreen():GetMusicWheel():SetOpenSection("");
+			end
+			-- Make sure we save any currently active profiles before potentially switching
+			-- to different ones.
+			GAMESTATE:SaveProfiles()
+			PROFILEMAN:SaveMachineProfile()
 
-					self:sleep(0.10):queuecommand("DirectInputToEngineForSelectProfile")
+			self:sleep(0.10):queuecommand("DirectInputToEngineForSelectProfile")
+		elseif params.Name == "FlagSong" then
+			local song = GAMESTATE:GetCurrentSong();
+			if song then
+				setFlaggedSong(song, true)
+			end
+		elseif params.Name == "UnflagSong" then
+			local song = GAMESTATE:GetCurrentSong();
+			if song then
+				setFlaggedSong(song, false)
+			end
 		end
 	end,
 	ReloadScreenForMemoryCardsMessageCommand=function(self, params)
