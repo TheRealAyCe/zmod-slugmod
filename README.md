@@ -10,10 +10,10 @@ Slugmod aims to improve some rough edges to make the theme a bit nicer to use, e
 - Can **flag**/unflag songs with LeftUp/RightUp
   - A small icon is shown next to the song name
   - Useful to mark songs with broken charts to be fixed later
-  - The list of marked songs is saved to Save/LocalProfiles (global)
+  - The list of marked songs is saved to `Save/LocalProfiles` (global)
 - Disable selecting of **invalid profiles** in the profile selection screen
-  - Invalid profiles are all profiles without an **Editable.ini**
-  - Invalid profiles show up when you create any subfolder inside the **LocalProfiles** folder - which can happen when using certain syncing tools
+  - Invalid profiles are all profiles without an `Editable.ini`
+  - Invalid profiles show up when you create any subfolder inside the `Save/LocalProfiles` folder - which can happen when using certain syncing tools
   - Hiding them completely would be better, but that's more involved - maybe at some point)
 
 Todo:
