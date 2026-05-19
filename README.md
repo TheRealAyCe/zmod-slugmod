@@ -14,7 +14,7 @@ Slugmod aims to improve some rough edges to make the theme a bit nicer to use, e
 - Disable selecting of **invalid profiles** in the profile selection screen
   - Invalid profiles are all profiles without an `Editable.ini`
   - Invalid profiles show up when you create any subfolder inside the `Save/LocalProfiles` folder - which can happen when using certain syncing tools
-  - Hiding them completely would be better, but that's more involved - maybe at some point)
+  - Hiding them completely would be better, but that's more involved - maybe at some point (the problem is that the Simply Love devs used the same index for the internal profile ID and the item number in the scroller. could decouple it with a lot of line changes I guess)
 
 Todo:
 - ESC menu handling (use as "back", close ESC menu with ESC)
