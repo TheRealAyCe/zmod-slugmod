@@ -290,7 +290,7 @@ return Def.ActorFrame{
 								if params == nil then
 									self:settext(THEME:GetString("ScreenSelectProfile", "GuestProfile"))
 								else
-									self:settext(THEME:GetString("ProfileAvatar", "NoAvatar"))
+									self:settext(params.isInvalid and "" or THEME:GetString("ProfileAvatar", "NoAvatar"))
 								end
 							end
 						}
@@ -303,7 +303,7 @@ return Def.ActorFrame{
 							self:align(0,0):scaletoclipped(avatar_dim,avatar_dim)
 						end,
 						SetCommand=function(self, params)
-							if params and params.index and avatars[params.index] then
+							if params and not params.isInvalid and params.index and avatars[params.index] then
 								self:Load(avatars[params.index]):visible(true)
 							else
 								self:visible(false)
@@ -323,7 +323,7 @@ return Def.ActorFrame{
 						self:maxwidth((info.w-info.padding*2.5)/self:GetZoom())
 					end,
 					SetCommand=function(self, params)
-						if params then
+						if params and not params.isInvalid then
 							self:visible(true):settext(params.totalsongs or "")
 						else
 							self:visible(false):settext("")

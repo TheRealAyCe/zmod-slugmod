@@ -115,6 +115,7 @@ for i=1, PROFILEMAN:GetNumLocalProfiles() do
 	local mods, noteskin, judgment = RecentMods(userprefs)
 
 	local data = {
+		isInvalid = not FILEMAN:DoesFileExist(dir.."Editable.ini"),
 		index = i,
 		dir = dir,
 		displayname = profile:GetDisplayName(),

@@ -2,15 +2,19 @@
 Slugmod aims to improve some rough edges to make the theme a bit nicer to use, especially for versus mode with different people (=events).
 
 - Dancing Slugcat GIFs by Not Luther (No One Is Around To Help)
-- Switch players directly from the song selection screen via Restart key
-- Display total/remaining song time instead of BPM in versus mode
+- Switch players directly from the song selection screen via **Restart** key
+- Display **total/remaining song time** instead of BPM in versus mode
 - <s>Useful tools on the first level of the options menu</s> (These have since been moved in Simply Love/zmod)
   - Switch Profile
   - Song Search
-- Can flag/unflag songs with LeftUp/RightUp
+- Can **flag**/unflag songs with LeftUp/RightUp
   - A small icon is shown next to the song name
   - Useful to mark songs with broken charts to be fixed later
   - The list of marked songs is saved to Save/LocalProfiles (global)
+- Disable selecting of **invalid profiles** in the profile selection screen
+  - Invalid profiles are all profiles without an **Editable.ini**
+  - Invalid profiles show up when you create any subfolder inside the **LocalProfiles** folder - which can happen when using certain syncing tools
+  - Hiding them completely would be better, but that's more involved - maybe at some point)
 
 Todo:
 - ESC menu handling (use as "back", close ESC menu with ESC)

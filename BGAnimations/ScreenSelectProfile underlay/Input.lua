@@ -89,6 +89,11 @@ Handle.Start = function(event)
 	else
 
 		local other_player = event.PlayerNumber == PLAYER_1 and PLAYER_2 or PLAYER_1
+		
+		if scrollers[event.PlayerNumber]:get_info_at_focus_pos().isInvalid then
+			-- disallow selecting invalid profiles
+			return
+		end
 
 		-- we only bother checking scrollers to see if both players are
 		-- trying to choose the same profile if there are scrollers because
